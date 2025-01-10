@@ -36,7 +36,7 @@ EOF
 FROM download-bbr as builder
 RUN <<"EOF"
 cd /bbr
-cp /debian_config/boot/config-6.1.0-12-cloud-amd64 .config
+cp /debian_config/boot/config-6.12.8 .config
 export BRANCH=`git rev-parse --abbrev-ref HEAD | sed s/-/+/g`
 export SHA1=`git rev-parse --short HEAD`
 export LOCALVERSION=+${BRANCH}+${SHA1}+GCE
